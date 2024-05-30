@@ -6,6 +6,6 @@ likely to be accessed in upcoming future.
 
 files: 
 
-1) LRU_CACHE.cpp  --> Code with comments explaination in comments itself.
+1) LRU_CACHE.cpp           --> Code with comments explaination in comments itself.
 
-2) Readme.md      --> description and simple explanation of code as well.
+2) descriptionLRUCACHE.md  --> description and simple explanation of code as well.
