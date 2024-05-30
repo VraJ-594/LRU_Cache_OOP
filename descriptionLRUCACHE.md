@@ -19,13 +19,13 @@ We have two operations in LRU
 
 How my Code works:
 
-1) I will create a DLL(Double Linked List) with head and tail node as reference nodes
-   along with Hashmap to track if key has corresponding data or not.
+1) I will create a DLL(Double Linked List) with head and tail node as reference nodes along with Hashmap to track if key has corresponding data or not.
 
 2) define a LRU_CACHE_MAX_SIZE which defines maximum size of LRU Cache.
 
 3) In PUT query :  
                     -> if already present in hashmap then delete node and insert at head as least recent used.
+   
                     -> if current size if less than max size then insert after head directly.
    
 ** most important   -> if current size reached maximum size then delete least recently used and insert new node after head.
@@ -36,8 +36,9 @@ How my Code works:
 
   
 
-5) In GET query :
+4) In GET query :
                     -> if key not found in hashmap return -1 as not present in LRU
+   
                     -> if key found in hashmap then we need to update the LRU i.e and
                        delete and insert to get updated LRU Cache.
 
@@ -47,7 +48,7 @@ How my Code works:
 
 
 
-OVERALL Complexity:
+5) OVERALL Complexity:
 
    Time Complexity : O(Q) for Q number of Queries
     
