@@ -1,7 +1,6 @@
 
 // BY Vraj Dobariya 
 // Date: 30th May 2024
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -205,26 +204,18 @@ public:
         // removing key from hashmap
         
         curr_size--;
-        hashmap.erase(hashmap.find(key));
-
-        Node* prevNode = head;
-
         // getting prevnode of the node to be deleted
-        while(prevNode->next!=tail)
-        {
-            if(prevNode->next->key==key)
-            {
-                break;
-            }
-            prevNode=prevNode->next;
-        }
+       
 
-        Node* deleteNode = prevNode->next;
+        Node* deleteNode = hashmap[key];
+
+        Node* prevNode = deleteNode->prev;
         
         // assigning pointers
         Node* afterdeleteNode = deleteNode->next;
         prevNode->next = afterdeleteNode;
         afterdeleteNode->prev = prevNode;
+        hashmap.erase(hashmap.find(key));
 
         delete deleteNode;
 
