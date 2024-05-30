@@ -5,12 +5,15 @@ How LRU Cache works:
 
 We have two operations in LRU 
 1) PUT(key,data) -> here we insert data into LRU now if key has alreay data then we update key value 
-                    else we just insert new data corresponding to key
+                    else we just insert new data corresponding to key:
+   
                     -> if size is full :
                                       then remove least recently used data and then insert new data
-                    -> else :          
+                    -> else :
                              we just insert the new data
-2) GET(key)     -> get the data corresponding to the given key
+   
+3) GET(key):        -> get the data corresponding to the given key:
+
                     -> if data is present :
                                           give the required data
                     -> else :
@@ -23,12 +26,14 @@ How my Code works:
 
 2) define a LRU_CACHE_MAX_SIZE which defines maximum size of LRU Cache.
 
-3) In PUT query :  
+3) In PUT query :
+   
                     -> if already present in hashmap then delete node and insert at head as least recent used.
    
                     -> if current size if less than max size then insert after head directly.
-   
-** most important   -> if current size reached maximum size then delete least recently used and insert new node after head.
+
+
+   ** most important   -> if current size reached maximum size then delete least recently used and insert new node after head.
 
    Time Complexity: O(1) for insertion and deletion on every queries so overall PUT TC : O(1)
    
@@ -36,7 +41,8 @@ How my Code works:
 
   
 
-4) In GET query :
+5) In GET query :
+   
                     -> if key not found in hashmap return -1 as not present in LRU
    
                     -> if key found in hashmap then we need to update the LRU i.e and
@@ -48,7 +54,7 @@ How my Code works:
 
 
 
-5) OVERALL Complexity:
+7) OVERALL Complexity:
 
    Time Complexity : O(Q) for Q number of Queries
     
