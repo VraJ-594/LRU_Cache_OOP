@@ -27,9 +27,11 @@ How my Code works:
 3) In PUT query :  
                     -> if already present in hashmap then delete node and insert at head as least recent used.
                     -> if current size if less than max size then insert after head directly.
+   
 ** most important   -> if current size reached maximum size then delete least recently used and insert new node after head.
 
    Time Complexity: O(1) for insertion and deletion on every queries so overall PUT TC : O(1)
+   
    Space Complexity: O(1) for creating new Node and inserting so overall Query Auxillary Space O(1)
 
   
@@ -40,12 +42,14 @@ How my Code works:
                        delete and insert to get updated LRU Cache.
 
    Time Complexity: O(1) for insertion and deletion on every queries so overall PUT TC : O(1)
+   
    Space Complexity: O(1) for creating new Node and inserting so overall Query Auxillary Space O(1)
 
 
 
 OVERALL Complexity:
-    Time Complexity : O(Q) for Q number of Queries
+   Time Complexity : O(Q) for Q number of Queries
+    
    Space Complexity : O(LRU_CACHE_MAX_SIZE) as Cache size remains limited always
 
 
